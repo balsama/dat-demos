@@ -2,10 +2,6 @@ uuid: 554957dc-25ee-4b2d-9d16-7046c2e18c46
 langcode: en
 status: true
 dependencies:
-  config:
-    - node.type.article
-    - node.type.page
-    - node.type.recipe
   module:
     - content_moderation
 _core:
@@ -63,9 +59,5 @@ type_settings:
       from:
         - draft
         - published
-  entity_types:
-    node:
-      - article
-      - page
-      - recipe
+  entity_types: {  }
   default_moderation_state: draft

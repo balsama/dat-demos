@@ -77,11 +77,6 @@
             "value": true
         }
     ],
-    "moderation_state": [
-        {
-            "value": "published"
-        }
-    ],
     "path": [
         {
             "alias": "\/articles\/give-it-a-go-and-grow-your-own-herbs",

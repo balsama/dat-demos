@@ -77,11 +77,6 @@
             "value": true
         }
     ],
-    "moderation_state": [
-        {
-            "value": "published"
-        }
-    ],
     "path": [
         {
             "alias": "\/articles\/skip-the-spirits-with-delicious-mocktails",

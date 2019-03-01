@@ -77,11 +77,6 @@
             "value": true
         }
     ],
-    "moderation_state": [
-        {
-            "value": "published"
-        }
-    ],
     "path": [
         {
             "alias": "\/articles\/lets-hear-it-for-carrots",
