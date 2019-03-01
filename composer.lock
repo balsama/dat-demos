@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "311e7203fe535f96ea3f51a99e8d2b89",
+    "content-hash": "1e3117117e004eb3cc5e006052737f5b",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1901,12 +1901,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "903e872b076eca31e29bc56a0d1f3cbe8f69f9de"
+                "reference": "903e872"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/903e872b076eca31e29bc56a0d1f3cbe8f69f9de",
-                "reference": "903e872b076eca31e29bc56a0d1f3cbe8f69f9de",
+                "url": "https://api.github.com/repos/drupal/core/zipball/903e872",
+                "reference": "903e872",
                 "shasum": ""
             },
             "require": {
@@ -2111,6 +2111,14 @@
                     "recurse": false,
                     "replace": false,
                     "merge-extra": false
+                },
+                "patches_applied": {
+                    "2988970: Layout Builder should make it easier to modify the default layout for an entity type when viewing an entity": "https://www.drupal.org/files/issues/2019-02-28/2988970-54.patch",
+                    "2938182: Design intuitive affordances for Layout Builder (for illustrating which parts of the page are editable in a given context)": "https://www.drupal.org/files/issues/2019-02-27/2938182-27.patch",
+                    "2959493: Allow Layout Builder live previews to be toggled to allow easier drag-and-drop": "https://www.drupal.org/files/issues/2019-02-28/2959493-56.patch",
+                    "3002608: Remove contextual links not related to layout administration inside layout builder blocks": "https://www.drupal.org/files/issues/2019-03-01/3002608-62.patch",
+                    "3023801: Allow newly uploaded files to be deleted from the media library without saving them": "https://www.drupal.org/files/issues/2019-02-28/3023801-30.patch",
+                    "2981044: Unify the grid/table views of the media library": "https://www.drupal.org/files/issues/2019-02-27/2981044-69.patch"
                 }
             },
             "autoload": {
@@ -2134,7 +2142,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2019-03-01T13:19:02+00:00"
+            "time": "2019-03-01T14:10:30+00:00"
         },
         {
             "name": "drupal/layout_builder_restrictions",
@@ -5692,6 +5700,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal-tome/tome_drush": 20,
+        "drupal/core": 20,
         "drupal/tome": 10
     },
     "prefer-stable": true,
