@@ -1,0 +1,183 @@
+{
+    "uuid": [
+        {
+            "value": "55d63899-82a8-472b-9b0e-fd7f1fd2f20c"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "recipe",
+            "target_type": "node_type",
+            "target_uuid": "c9e6887d-32f2-4e34-a5cf-112f7bfedae8"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2019-03-01T14:14:29+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "535964cc-0ad2-42cb-bb86-1cda64305238"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "535964cc-0ad2-42cb-bb86-1cda64305238"
+        }
+    ],
+    "title": [
+        {
+            "value": "Fiery chili sauce"
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-03-01T14:14:29+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2019-03-01T14:14:29+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "moderation_state": [
+        {
+            "value": "published"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/recipes\/fiery-chili-sauce",
+            "langcode": "en"
+        }
+    ],
+    "field_cooking_time": [
+        {
+            "value": 50
+        }
+    ],
+    "field_difficulty": [
+        {
+            "value": "easy"
+        }
+    ],
+    "field_image": [
+        {
+            "alt": "An iridescent array of chilies, onions, and garlic, slowly sweating over a low heat",
+            "title": null,
+            "width": 768,
+            "height": 512,
+            "target_type": "file",
+            "target_uuid": "bcbb7057-2f8b-4314-a61b-3a133f36554b"
+        }
+    ],
+    "field_ingredients": [
+        {
+            "value": "2 red onions"
+        },
+        {
+            "value": " 1 lemon"
+        },
+        {
+            "value": " 2 limes"
+        },
+        {
+            "value": " 250ml malt vinegar"
+        },
+        {
+            "value": " 7 garlic cloves"
+        },
+        {
+            "value": " 1 green bell pepper"
+        },
+        {
+            "value": " 1 red bell pepper"
+        },
+        {
+            "value": " 800g cherry tomatoes"
+        },
+        {
+            "value": " 30 mixed chilies"
+        },
+        {
+            "value": " Olive oil"
+        },
+        {
+            "value": " 1 tbsp ground black pepper"
+        },
+        {
+            "value": " 1 tbsp brown sugar"
+        }
+    ],
+    "field_number_of_servings": [
+        {
+            "value": 60
+        }
+    ],
+    "field_preparation_time": [
+        {
+            "value": 10
+        }
+    ],
+    "field_recipe_category": [
+        {
+            "target_type": "taxonomy_term",
+            "target_uuid": "d494d559-0f8e-4b5f-9fc1-ff8e552fa524"
+        }
+    ],
+    "field_recipe_instruction": [
+        {
+            "value": "<ol>\n  <li>Preheat the oven to 400\u00b0F\/200\u00b0C.<\/li>\n  <li>Finely chop the red onions and sweat gently on a low heat in olive oil for 5 minutes.<\/li>\n  <li>Peel the garlic and add it to the onions.<\/li>\n  <li>Meanwhile, chop the bell peppers to 1 inch pieces. Add the bell peppers and tomatoes to a roasting dish, and rub with lemon juice, olive oil and black pepper. Transfer to the oven and roast for 30 minutes.<\/li>\n  <li>Once the onions and garlic have softened, chop and add the chilies, seeds and all. Mix well and continue to gently fry.<\/li>\n  <li>Thoroughly wash your hands following handling raw chilies.<\/li>\n  <li>Once the tomatoes and bell peppers have finished roasting, add them to the pan. Cook for at least 10 minutes, breaking them up with a masher or a hand blender as they simmer. Once broken up, mix in the sugar.<\/li>\n  <li>Transfer the sauce to a blender and blend until smooth.<\/li>\n  <li>Return to the pan and add the vinegar and juice of the limes.<\/li>\n  <li>Cook through for a further 10 minutes, then leave to cool.<\/li>\n  <li>Transfer to sterilized jars and keep refrigerated.<\/li>\n  <li>Leave for at least two weeks before tasting.<\/li>\n<\/ol>\n",
+            "format": "basic_html"
+        }
+    ],
+    "field_summary": [
+        {
+            "value": "A rich and fiery chili sauce. Take care when handling chili peppers. And serve sparingly!",
+            "format": "basic_html"
+        }
+    ],
+    "field_tags": [
+        {
+            "target_type": "taxonomy_term",
+            "target_uuid": "d960bdb1-53e8-4bd4-a08e-b20cb069d800"
+        }
+    ]
+}
