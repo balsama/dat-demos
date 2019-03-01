@@ -1,0 +1,55 @@
+{
+    "uuid": [
+        {
+            "value": "0e1ef27f-f909-4f9b-a9b7-283ef4079c76"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "c2b934ff-e52a-44f4-a791-62de3eb362e3"
+        }
+    ],
+    "filename": [
+        {
+            "value": "victoria-sponge-umami.jpg"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2019-03\/victoria-sponge-umami.jpg"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/jpeg"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 65418
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-03-01T15:40:57+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2019-03-01T15:41:00+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}

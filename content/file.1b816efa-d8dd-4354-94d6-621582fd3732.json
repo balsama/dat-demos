@@ -1,0 +1,55 @@
+{
+    "uuid": [
+        {
+            "value": "1b816efa-d8dd-4354-94d6-621582fd3732"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "c2b934ff-e52a-44f4-a791-62de3eb362e3"
+        }
+    ],
+    "filename": [
+        {
+            "value": "pizza-umami.jpg"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2019-03\/pizza-umami.jpg"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/jpeg"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 81301
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-03-01T15:41:36+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2019-03-01T15:41:39+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "uuid": [
+        {
+            "value": "2b0abb60-d40b-4c79-8102-b0d400e10f1c"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "c2b934ff-e52a-44f4-a791-62de3eb362e3"
+        }
+    ],
+    "filename": [
+        {
+            "value": "generateImage_cCCMKi.jpg"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2019-03\/generateImage_cCCMKi.jpg"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/jpeg"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 2688
+        }
+    ],
+    "status": [
+        {
+            "value": false
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-03-01T15:33:31+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2019-03-01T15:33:31+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}

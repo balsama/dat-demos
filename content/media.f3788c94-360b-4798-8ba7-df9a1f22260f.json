@@ -1,0 +1,92 @@
+{
+    "uuid": [
+        {
+            "value": "f3788c94-360b-4798-8ba7-df9a1f22260f"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "0a0ceff8-a934-479b-9b40-e00d455db95e"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2019-03-01T15:36:52+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_user": [],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "c2b934ff-e52a-44f4-a791-62de3eb362e3"
+        }
+    ],
+    "name": [
+        {
+            "value": "veggie-pasta-bake-umami.jpg"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "Cheesy pasta dish with vegetarian sausages and topped with mozzarella cheese and basil",
+            "title": null,
+            "width": 768,
+            "height": 511,
+            "target_type": "file",
+            "target_uuid": "cb1a9be7-1b5e-4d92-918f-d5104c571e95"
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-03-01T15:36:52+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2019-03-01T15:36:52+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en"
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "Cheesy pasta dish with vegetarian sausages and topped with mozzarella cheese and basil",
+            "title": "",
+            "width": 768,
+            "height": 511,
+            "target_type": "file",
+            "target_uuid": "cb1a9be7-1b5e-4d92-918f-d5104c571e95"
+        }
+    ]
+}

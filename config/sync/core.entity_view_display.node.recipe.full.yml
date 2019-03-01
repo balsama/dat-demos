@@ -1,6 +1,6 @@
 uuid: 04227ee8-c80e-40e1-98b6-50ad00780e22
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.full

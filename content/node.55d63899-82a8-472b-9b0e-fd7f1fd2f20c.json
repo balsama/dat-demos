@@ -18,14 +18,14 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2019-03-01T14:14:29+00:00",
+            "value": "2019-03-01T15:43:31+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "revision_uid": [
         {
             "target_type": "user",
-            "target_uuid": "535964cc-0ad2-42cb-bb86-1cda64305238"
+            "target_uuid": "c2b934ff-e52a-44f4-a791-62de3eb362e3"
         }
     ],
     "revision_log": [],
@@ -53,7 +53,7 @@
     ],
     "changed": [
         {
-            "value": "2019-03-01T14:14:29+00:00",
+            "value": "2019-03-01T15:43:31+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -101,7 +101,7 @@
     "field_image": [
         {
             "alt": "An iridescent array of chilies, onions, and garlic, slowly sweating over a low heat",
-            "title": null,
+            "title": "",
             "width": 768,
             "height": 512,
             "target_type": "file",
@@ -162,15 +162,21 @@
             "target_uuid": "d494d559-0f8e-4b5f-9fc1-ff8e552fa524"
         }
     ],
+    "field_recipe_image": [
+        {
+            "target_type": "media",
+            "target_uuid": "56fcf179-9ad0-4e02-b4fd-401cc9836dc3"
+        }
+    ],
     "field_recipe_instruction": [
         {
-            "value": "<ol>\n  <li>Preheat the oven to 400\u00b0F\/200\u00b0C.<\/li>\n  <li>Finely chop the red onions and sweat gently on a low heat in olive oil for 5 minutes.<\/li>\n  <li>Peel the garlic and add it to the onions.<\/li>\n  <li>Meanwhile, chop the bell peppers to 1 inch pieces. Add the bell peppers and tomatoes to a roasting dish, and rub with lemon juice, olive oil and black pepper. Transfer to the oven and roast for 30 minutes.<\/li>\n  <li>Once the onions and garlic have softened, chop and add the chilies, seeds and all. Mix well and continue to gently fry.<\/li>\n  <li>Thoroughly wash your hands following handling raw chilies.<\/li>\n  <li>Once the tomatoes and bell peppers have finished roasting, add them to the pan. Cook for at least 10 minutes, breaking them up with a masher or a hand blender as they simmer. Once broken up, mix in the sugar.<\/li>\n  <li>Transfer the sauce to a blender and blend until smooth.<\/li>\n  <li>Return to the pan and add the vinegar and juice of the limes.<\/li>\n  <li>Cook through for a further 10 minutes, then leave to cool.<\/li>\n  <li>Transfer to sterilized jars and keep refrigerated.<\/li>\n  <li>Leave for at least two weeks before tasting.<\/li>\n<\/ol>\n",
+            "value": "<ol>\r\n\t<li>Preheat the oven to 400\u00b0F\/200\u00b0C.<\/li>\r\n\t<li>Finely chop the red onions and sweat gently on a low heat in olive oil for 5 minutes.<\/li>\r\n\t<li>Peel the garlic and add it to the onions.<\/li>\r\n\t<li>Meanwhile, chop the bell peppers to 1 inch pieces. Add the bell peppers and tomatoes to a roasting dish, and rub with lemon juice, olive oil and black pepper. Transfer to the oven and roast for 30 minutes.<\/li>\r\n\t<li>Once the onions and garlic have softened, chop and add the chilies, seeds and all. Mix well and continue to gently fry.<\/li>\r\n\t<li>Thoroughly wash your hands following handling raw chilies.<\/li>\r\n\t<li>Once the tomatoes and bell peppers have finished roasting, add them to the pan. Cook for at least 10 minutes, breaking them up with a masher or a hand blender as they simmer. Once broken up, mix in the sugar.<\/li>\r\n\t<li>Transfer the sauce to a blender and blend until smooth.<\/li>\r\n\t<li>Return to the pan and add the vinegar and juice of the limes.<\/li>\r\n\t<li>Cook through for a further 10 minutes, then leave to cool.<\/li>\r\n\t<li>Transfer to sterilized jars and keep refrigerated.<\/li>\r\n\t<li>Leave for at least two weeks before tasting.<\/li>\r\n<\/ol>\r\n",
             "format": "basic_html"
         }
     ],
     "field_summary": [
         {
-            "value": "A rich and fiery chili sauce. Take care when handling chili peppers. And serve sparingly!",
+            "value": "<p>A rich and fiery chili sauce. Take care when handling chili peppers. And serve sparingly!<\/p>\r\n",
             "format": "basic_html"
         }
     ],

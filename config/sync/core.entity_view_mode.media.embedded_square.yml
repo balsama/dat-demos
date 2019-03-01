@@ -1,0 +1,10 @@
+uuid: 78e1e225-3946-42d6-938e-fe792e0360f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.embedded_square
+label: 'Embedded square'
+targetEntityType: media
+cache: true

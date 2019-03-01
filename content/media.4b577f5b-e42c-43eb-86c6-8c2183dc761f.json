@@ -1,0 +1,92 @@
+{
+    "uuid": [
+        {
+            "value": "4b577f5b-e42c-43eb-86c6-8c2183dc761f"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "0a0ceff8-a934-479b-9b40-e00d455db95e"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2019-03-01T15:42:44+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_user": [],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "c2b934ff-e52a-44f4-a791-62de3eb362e3"
+        }
+    ],
+    "name": [
+        {
+            "value": "crema-catalana-umami.jpg"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "Typical Catalan dessert made from cream and egg yolks, covered with a traditional layer of caramelized sugar to provide a crispy contrast.",
+            "title": null,
+            "width": 768,
+            "height": 512,
+            "target_type": "file",
+            "target_uuid": "5161eb16-e35d-44a9-8440-cd908c90749d"
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-03-01T15:42:44+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2019-03-01T15:42:44+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en"
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "Typical Catalan dessert made from cream and egg yolks, covered with a traditional layer of caramelized sugar to provide a crispy contrast.",
+            "title": "",
+            "width": 768,
+            "height": 512,
+            "target_type": "file",
+            "target_uuid": "5161eb16-e35d-44a9-8440-cd908c90749d"
+        }
+    ]
+}

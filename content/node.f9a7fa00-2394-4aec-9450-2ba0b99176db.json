@@ -18,14 +18,14 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2019-03-01T14:14:29+00:00",
+            "value": "2019-03-01T15:41:43+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "revision_uid": [
         {
             "target_type": "user",
-            "target_uuid": "535964cc-0ad2-42cb-bb86-1cda64305238"
+            "target_uuid": "c2b934ff-e52a-44f4-a791-62de3eb362e3"
         }
     ],
     "revision_log": [],
@@ -53,7 +53,7 @@
     ],
     "changed": [
         {
-            "value": "2019-03-01T14:14:29+00:00",
+            "value": "2019-03-01T15:41:43+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -101,7 +101,7 @@
     "field_image": [
         {
             "alt": "Olives, basil, and mozzarella top a gluten free pizza crust with marinara sauce.",
-            "title": null,
+            "title": "",
             "width": 768,
             "height": 512,
             "target_type": "file",
@@ -165,15 +165,21 @@
             "target_uuid": "69779885-d1dd-4e28-9229-20779253c4ec"
         }
     ],
+    "field_recipe_image": [
+        {
+            "target_type": "media",
+            "target_uuid": "f330b2ef-c269-4810-8a9d-0fb71588adc6"
+        }
+    ],
     "field_recipe_instruction": [
         {
-            "value": "<ol>\n  <li>Preheat the oven to 425\u00b0F\/220\u00b0C. Mix some of the milk and water in a jug, and add the yeast and sugar, then set aside.<\/li>\n  <li>In a bowl, mix the flour, salt and oil. Slowly add the liquid from the jug and form into a dough.<\/li>\n  <li>Break the dough in half and shape into two pizza bases. Set aside for about 15 minutes, whilst making the topping.<\/li>\n  <li>Spread the tomato puree over the pizza bases, chop the basil and rocket and sprinkle over the tomato. Lay the chopped Parma ham on top and add thick slices of mozzarella across the pizza.<\/li>\n  <li>Cook in the oven directly on the top shelf (with a tray underneath) for 10-12 minutes until the mozzarella is bubbling. Season with salt and pepper and serve.<\/li>\n<\/ol>\n",
+            "value": "<ol>\r\n\t<li>Preheat the oven to 425\u00b0F\/220\u00b0C. Mix some of the milk and water in a jug, and add the yeast and sugar, then set aside.<\/li>\r\n\t<li>In a bowl, mix the flour, salt and oil. Slowly add the liquid from the jug and form into a dough.<\/li>\r\n\t<li>Break the dough in half and shape into two pizza bases. Set aside for about 15 minutes, whilst making the topping.<\/li>\r\n\t<li>Spread the tomato puree over the pizza bases, chop the basil and rocket and sprinkle over the tomato. Lay the chopped Parma ham on top and add thick slices of mozzarella across the pizza.<\/li>\r\n\t<li>Cook in the oven directly on the top shelf (with a tray underneath) for 10-12 minutes until the mozzarella is bubbling. Season with salt and pepper and serve.<\/li>\r\n<\/ol>\r\n",
             "format": "basic_html"
         }
     ],
     "field_summary": [
         {
-            "value": "A gorgeous and simple gluten free pizza, with deliciously indulgent mozzarella and Parma ham. Can easily be vegetarian by leaving out the ham.",
+            "value": "<p>A gorgeous and simple gluten free pizza, with deliciously indulgent mozzarella and Parma ham. Can easily be vegetarian by leaving out the ham.<\/p>\r\n",
             "format": "basic_html"
         }
     ],
