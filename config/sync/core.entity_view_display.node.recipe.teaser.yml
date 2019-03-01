@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.recipe.field_number_of_servings
     - field.field.node.recipe.field_preparation_time
     - field.field.node.recipe.field_recipe_category
+    - field.field.node.recipe.field_recipe_image
     - field.field.node.recipe.field_recipe_instruction
     - field.field.node.recipe.field_summary
     - field.field.node.recipe.field_tags
@@ -37,6 +38,7 @@ hidden:
   field_number_of_servings: true
   field_preparation_time: true
   field_recipe_category: true
+  field_recipe_image: true
   field_recipe_instruction: true
   field_summary: true
   field_tags: true
