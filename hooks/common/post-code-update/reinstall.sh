@@ -13,9 +13,11 @@ ls -la
 echo '--------------------------------';
 ls -la $target_env/
 echo '--------------------------------';
-ls -la $target_env/config
+ls -la $target_env/livedev
 echo '--------------------------------';
-ls -la $target_env/config/default
+ls -la $target_env/livedev/config
+echo '--------------------------------';
+ls -la $target_env/livedev/config/default
 echo '--------------------------------';
 
 /usr/local/bin/drush9 @$site.$target_env tome:install --yes
