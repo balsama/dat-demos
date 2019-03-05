@@ -1,0 +1,41 @@
+diff --git a/modules/tome_sync/src/Commands/ImportCommand.php b/modules/tome_sync/src/Commands/ImportCommand.php
+index 05021c7..d9c7d7b 100644
+--- a/modules/tome_sync/src/Commands/ImportCommand.php
++++ b/modules/tome_sync/src/Commands/ImportCommand.php
+@@ -76,12 +76,15 @@ class ImportCommand extends CommandBase {
+    */
+   protected function execute(InputInterface $input, OutputInterface $output) {
+     $options = $input->getOptions();
++    $this->io()->writeln('Line 79');
+     if (!$options['yes'] && !$this->io()->confirm('Your local site\'s config, content, and files will be deleted and replaced.', FALSE)) {
+       return 0;
+     }
++    $this->io()->writeln('Line 83');
+ 
+     \Drupal::service('config.installer')->setSyncing(TRUE);
+     $this->importer->isImporting(TRUE);
++    $this->io()->writeln('Line 87');
+     foreach ($this->entityTypeManager->getDefinitions() as $entity_type) {
+       if ($entity_type instanceof ContentEntityTypeInterface) {
+         foreach ($this->entityTypeManager->getStorage($entity_type->id())->loadMultiple() as $entity) {
+@@ -92,14 +95,20 @@ class ImportCommand extends CommandBase {
+       }
+     }
+     $this->importer->isImporting(FALSE);
++    $this->io()->writeln('Line 98');
+     \Drupal::service('config.installer')->setSyncing(FALSE);
+ 
+     /** @var \Drupal\Core\Config\StorageInterface $source_storage */
++    $this->io()->writeln('Line 102');
+     $source_storage = \Drupal::service('config.storage.sync');
++    $this->io()->writeln('Line 104');
+     \Drupal::configFactory()->getEditable('system.site')->setData($source_storage->read('system.site'))->save(TRUE);
++    $this->io()->writeln('Line 106');
+     if (!$this->runCommand($this->executable . " config:import -y", NULL, NULL)) {
++      $this->io()->writeln('Line 108');
+       return 1;
+     }
++    $this->io()->writeln('Line 111');
+ 
+     $chunked_names = $this->importer->getChunkedNames();
+     foreach ($chunked_names as $chunk) {
