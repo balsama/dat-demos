@@ -89,6 +89,10 @@
                 "https://www.drupal.org/files/issues/2019-02-28/3023801-30.patch",
                 "2981044: Unify the grid/table views of the media library":
                 "https://www.drupal.org/files/issues/2019-02-27/2981044-69.patch"
+            },
+            "drupal/tome": {
+                "Account for ephemeral storage":
+                "./patches/tome.patch"
             }
         },
         "installer-paths": {

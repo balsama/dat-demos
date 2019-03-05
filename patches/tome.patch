@@ -1,0 +1,17 @@
+diff --git a/modules/tome_sync/src/Commands/ImportCommand.php b/modules/tome_sync/src/Commands/ImportCommand.php
+index 05021c7..1392e6d 100644
+--- a/modules/tome_sync/src/Commands/ImportCommand.php
++++ b/modules/tome_sync/src/Commands/ImportCommand.php
+@@ -97,9 +97,12 @@ class ImportCommand extends CommandBase {
+     /** @var \Drupal\Core\Config\StorageInterface $source_storage */
+     $source_storage = \Drupal::service('config.storage.sync');
+     \Drupal::configFactory()->getEditable('system.site')->setData($source_storage->read('system.site'))->save(TRUE);
++    $this->io()->writeln('Line 100');
+     if (!$this->runCommand($this->executable . " config:import -y", NULL, NULL)) {
++      $this->io()->writeln('Line 102');
+       return 1;
+     }
++    $this->io()->writeln('Line 105');
+ 
+     $chunked_names = $this->importer->getChunkedNames();
+     foreach ($chunked_names as $chunk) {
