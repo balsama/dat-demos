@@ -9,9 +9,13 @@ drush --version
 /usr/local/bin/drush9 @$site.$target_env list
 
 echo '--------------------------------';
-
 ls -la
-
+echo '--------------------------------';
+ls -la $target_env/
+echo '--------------------------------';
+ls -la $target_env/config
+echo '--------------------------------';
+ls -la $target_env/config/default
 echo '--------------------------------';
 
 /usr/local/bin/drush9 @$site.$target_env tome:install --yes
