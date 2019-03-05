@@ -15,4 +15,3 @@ events:
             - export PATH="$HOME/.composer/vendor/bin:$SOURCE_DIR/vendor/bin:$PATH"
             - composer validate --no-check-all --ansi --no-interaction
             - composer install
-            - chmod -R 775 ./config

@@ -773,4 +773,4 @@ if (file_exists('/var/www/site-php')) {
   require '/var/www/site-php/datdemos/datdemos-settings.inc';
 }
 
-$config_directories['sync'] = '../config/default';
+$config_directories['sync'] = './sites/config/default/sync';
