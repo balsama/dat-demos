@@ -8,5 +8,11 @@ drush --version
 /usr/local/bin/drush9  --version
 /usr/local/bin/drush9 @$site.$target_env list
 
+echo '--------------------------------';
+
+ls -la
+
+echo '--------------------------------';
+
 /usr/local/bin/drush9 @$site.$target_env tome:install --yes
 /usr/local/bin/drush9 @$site.$target_env user:password admin admin
