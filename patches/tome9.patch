@@ -1,0 +1,102 @@
+diff --git a/modules/tome_sync/src/Commands/ImportCommand.php b/modules/tome_sync/src/Commands/ImportCommand.php
+index 05021c7..7ea57c9 100644
+--- a/modules/tome_sync/src/Commands/ImportCommand.php
++++ b/modules/tome_sync/src/Commands/ImportCommand.php
+@@ -2,6 +2,7 @@
+ 
+ namespace Drupal\tome_sync\Commands;
+ 
++use Drupal\Core\Config\ConfigFactoryInterface;
+ use Drupal\Core\Entity\ContentEntityInterface;
+ use Drupal\Core\Entity\ContentEntityTypeInterface;
+ use Drupal\Core\Entity\EntityTypeManagerInterface;
+@@ -46,6 +47,13 @@ class ImportCommand extends CommandBase {
+    */
+   protected $entityTypeManager;
+ 
++  /**
++   * The config factory.
++   *
++   * @var \Drupal\Core\Config\ConfigFactory
++   */
++  protected $configFactory;
++
+   /**
+    * Constructs an ExportCommands instance.
+    *
+@@ -53,11 +61,14 @@ class ImportCommand extends CommandBase {
+    *   The importer.
+    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+    *   The entity type manager.
++   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
++   *   The config factory.
+    */
+-  public function __construct(ImporterInterface $importer, EntityTypeManagerInterface $entity_type_manager) {
++  public function __construct(ImporterInterface $importer, EntityTypeManagerInterface $entity_type_manager, ConfigFactoryInterface $config_factory) {
+     parent::__construct();
+     $this->importer = $importer;
+     $this->entityTypeManager = $entity_type_manager;
++    $this->configFactory = $config_factory;
+   }
+ 
+   /**
+@@ -96,7 +107,10 @@ class ImportCommand extends CommandBase {
+ 
+     /** @var \Drupal\Core\Config\StorageInterface $source_storage */
+     $source_storage = \Drupal::service('config.storage.sync');
+-    \Drupal::configFactory()->getEditable('system.site')->setData($source_storage->read('system.site'))->save(TRUE);
++    $config_factory = $this->configFactory;
++    print __DIR__;
++    print_r(scandir(__DIR__));
++    $config_factory->getEditable('system.site')->setData($source_storage->read('system.site'))->save(TRUE);
+     if (!$this->runCommand($this->executable . " config:import -y", NULL, NULL)) {
+       return 1;
+     }
+diff --git a/modules/tome_sync/src/Commands/ImportContentCommand.php b/modules/tome_sync/src/Commands/ImportContentCommand.php
+index 2c829e1..640766a 100644
+--- a/modules/tome_sync/src/Commands/ImportContentCommand.php
++++ b/modules/tome_sync/src/Commands/ImportContentCommand.php
+@@ -2,6 +2,7 @@
+ 
+ namespace Drupal\tome_sync\Commands;
+ 
++use Drupal\Core\Config\ConfigFactoryInterface;
+ use Drupal\Core\Entity\EntityTypeManagerInterface;
+ use Drupal\Core\Session\AccountSwitcherInterface;
+ use Drupal\tome_sync\AccountSwitcherTrait;
+@@ -34,9 +35,11 @@ class ImportContentCommand extends ImportCommand {
+    *   The entity type manager.
+    * @param \Drupal\Core\Session\AccountSwitcherInterface $account_switcher
+    *   The account switcher.
++   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
++   *   The config factory.
+    */
+-  public function __construct(ImporterInterface $importer, EntityTypeManagerInterface $entity_type_manager, AccountSwitcherInterface $account_switcher) {
+-    parent::__construct($importer, $entity_type_manager);
++  public function __construct(ImporterInterface $importer, EntityTypeManagerInterface $entity_type_manager, AccountSwitcherInterface $account_switcher, ConfigFactoryInterface $config_factory) {
++    parent::__construct($importer, $entity_type_manager, $config_factory);
+     $this->accountSwitcher = $account_switcher;
+   }
+ 
+diff --git a/modules/tome_sync/tome_sync.services.yml b/modules/tome_sync/tome_sync.services.yml
+index 7cd7938..65b6d73 100644
+--- a/modules/tome_sync/tome_sync.services.yml
++++ b/modules/tome_sync/tome_sync.services.yml
+@@ -33,7 +33,7 @@ services:
+       - { name: drupal.command }
+   tome_sync.import_command:
+     class: Drupal\tome_sync\Commands\ImportCommand
+-    arguments: ['@tome_sync.importer', '@entity_type.manager']
++    arguments: ['@tome_sync.importer', '@entity_type.manager', '@config.factory']
+     tags:
+       - { name: console.command }
+       - { name: drupal.command }
+@@ -45,7 +45,7 @@ services:
+       - { name: drupal.command }
+   tome_sync.import_content_command:
+     class: Drupal\tome_sync\Commands\ImportContentCommand
+-    arguments: ['@tome_sync.importer', '@entity_type.manager', '@account_switcher']
++    arguments: ['@tome_sync.importer', '@entity_type.manager', '@account_switcher', '@config.factory']
+     tags:
+       - { name: console.command }
+       - { name: drupal.command }

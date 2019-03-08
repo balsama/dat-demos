@@ -92,7 +92,7 @@
             },
             "drupal/tome": {
                 "Account for ephemeral storage":
-                "./patches/tome8.patch"
+                "./patches/tome9.patch"
             }
         },
         "installer-paths": {
