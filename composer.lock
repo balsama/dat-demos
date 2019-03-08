@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f8bce7e88386b504b56eed85334bfd22",
+    "content-hash": "55de56eebc049cc6896fc3ff65ce5a5e",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1664,7 +1664,7 @@
             "type": "drupal-drush",
             "extra": {
                 "patches_applied": {
-                    "Allow aliases": "./patches/tome_drush-02.patch"
+                    "Add support for passing Drush site aliases": "./patches/tome_drush-04.patch"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2160,7 +2160,8 @@
                     "2959493: Allow Layout Builder live previews to be toggled to allow easier drag-and-drop": "https://www.drupal.org/files/issues/2019-02-28/2959493-56.patch",
                     "3002608: Remove contextual links not related to layout administration inside layout builder blocks": "https://www.drupal.org/files/issues/2019-03-01/3002608-62.patch",
                     "3023801: Allow newly uploaded files to be deleted from the media library without saving them": "https://www.drupal.org/files/issues/2019-02-28/3023801-30.patch",
-                    "2981044: Unify the grid/table views of the media library": "https://www.drupal.org/files/issues/2019-02-27/2981044-69.patch"
+                    "2981044: Unify the grid/table views of the media library": "https://www.drupal.org/files/issues/2019-02-27/2981044-69.patch",
+                    "remove hook_install from umami": "./patches/umami-install-02.patch"
                 }
             },
             "autoload": {
@@ -2184,7 +2185,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2019-03-01T14:10:30+00:00"
+            "time": "2019-03-08T14:19:14+00:00"
         },
         {
             "name": "drupal/layout_builder_restrictions",
@@ -2274,7 +2275,7 @@
                     }
                 },
                 "patches_applied": {
-                    "Account for ephemeral storage": "./patches/tome9.patch"
+                    "Remove save event subscriber action": "./patches/tome14.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
