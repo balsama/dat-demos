@@ -93,6 +93,10 @@
             "drupal/tome": {
                 "Account for ephemeral storage":
                 "./patches/tome9.patch"
+            },
+            "drupal-tome/tome_drush" :{
+                "Allow aliases":
+                "./patches/tome_drush-01.patch"
             }
         },
         "installer-paths": {
