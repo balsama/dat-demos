@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a2fd8782693e555ea268801158fff99d",
+    "content-hash": "f8bce7e88386b504b56eed85334bfd22",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1664,7 +1664,7 @@
             "type": "drupal-drush",
             "extra": {
                 "patches_applied": {
-                    "Allow aliases": "./patches/tome_drush-01.patch"
+                    "Allow aliases": "./patches/tome_drush-02.patch"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",

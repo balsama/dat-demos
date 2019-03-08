@@ -1,0 +1,74 @@
+diff --git a/InstallCommands.php b/InstallCommands.php
+index 17cedb0..f4820a6 100644
+--- a/InstallCommands.php
++++ b/InstallCommands.php
+@@ -20,10 +20,14 @@ class InstallCommands extends DrushCommands {
+    * @bootstrap configuration
+    * @command tome:install
+    *
++   * @param string $site_alias_record
++   *   The alias to use when invoking the command.
++   *
+    * @return int|null
+    *   The status code, if the command did not complete successfully.
+    */
+-  public function install() {
++  public function install($site_alias_record = '@self') {
++    $this->io()->writeln('Site alias: ' . $site_alias_record);
+     if (!$this->io()->confirm('You are about to DROP all tables in your local database and re-install Tome. Do you want to continue?', FALSE)) {
+       return 0;
+     }
+@@ -38,18 +42,18 @@ class InstallCommands extends DrushCommands {
+ 
+     $config = $source_storage->read('core.extension');
+ 
+-    drush_invoke_process('@self', 'site-install', [$config['profile']], ['yes' => TRUE, 'sites-subdir' => 'default']);
++    drush_invoke_process($site_alias_record, 'site-install', [$config['profile']], ['yes' => TRUE, 'sites-subdir' => 'default']);
+     if (drush_get_error()) return 1;
+     if (isset($config['module']['tome_sync'])) {
+-      drush_invoke_process('@self', 'pm:enable', ['tome_sync'], ['yes' => TRUE]);
++      drush_invoke_process($site_alias_record, 'pm:enable', ['tome_sync'], ['yes' => TRUE]);
+     }
+     else {
+-      drush_invoke_process('@self', 'pm:enable', ['tome'], ['yes' => TRUE]);
++      drush_invoke_process($site_alias_record, 'pm:enable', ['tome'], ['yes' => TRUE]);
+     }
+     if (drush_get_error()) return 1;
+-    drush_invoke_process('@self', 'tome:import', [], ['yes' => TRUE]);
++    drush_invoke_process($site_alias_record, 'tome:import', [], ['yes' => TRUE]);
+     if (drush_get_error()) return 1;
+-    drush_invoke_process('@self', 'cache:rebuild', [], ['yes' => TRUE]);
++    drush_invoke_process($site_alias_record, 'cache:rebuild', [], ['yes' => TRUE]);
+     if (drush_get_error()) return 1;
+   }
+ 
+@@ -59,10 +63,13 @@ class InstallCommands extends DrushCommands {
+    * @bootstrap configuration
+    * @command tome:init
+    *
++   * @param string $site_alias_record
++   *   The alias to use when invoking the command.
++   *
+    * @return int|null
+    *   The status code, if the command did not complete successfully.
+    */
+-  public function init() {
++  public function init($site_alias_record = '@self') {
+     if (is_dir(config_get_config_directory(CONFIG_SYNC_DIRECTORY)) || is_dir(Settings::get('tome_content_directory', '../content'))) {
+       if (!$this->io()->confirm('Running this command will remove all exported content and configuration. Do you want to continue?', FALSE)) {
+         return 0;
+@@ -71,11 +78,11 @@ class InstallCommands extends DrushCommands {
+ 
+     $profiles = $this->getProfiles();
+     $profile = $this->io()->choice('Select an installation profile', $profiles);
+-    drush_invoke_process('@self', 'site-install', [$profile], ['yes' => TRUE, 'sites-subdir' => 'default']);
++    drush_invoke_process($site_alias_record, 'site-install', [$profile], ['yes' => TRUE, 'sites-subdir' => 'default']);
+     if (drush_get_error()) return 1;
+-    drush_invoke_process('@self', 'pm:enable', ['tome'], ['yes' => TRUE]);
++    drush_invoke_process($site_alias_record, 'pm:enable', ['tome'], ['yes' => TRUE]);
+     if (drush_get_error()) return 1;
+-    drush_invoke_process('@self', 'tome:export', [], ['yes' => TRUE]);
++    drush_invoke_process($site_alias_record, 'tome:export', [], ['yes' => TRUE]);
+     if (drush_get_error()) return 1;
+   }
+ 

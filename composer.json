@@ -96,7 +96,7 @@
             },
             "drupal-tome/tome_drush" :{
                 "Allow aliases":
-                "./patches/tome_drush-01.patch"
+                "./patches/tome_drush-02.patch"
             }
         },
         "installer-paths": {
