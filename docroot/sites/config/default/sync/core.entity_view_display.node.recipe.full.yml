@@ -111,4 +111,6 @@ content:
     region: content
 hidden:
   content_moderation_control: true
+  field_recipe_image: true
+  layout_builder__layout: true
   links: true

@@ -1,0 +1,57 @@
+diff --git a/modules/tome_sync/src/Commands/ImportCommand.php b/modules/tome_sync/src/Commands/ImportCommand.php
+index 05021c7..4bc0ba3 100644
+--- a/modules/tome_sync/src/Commands/ImportCommand.php
++++ b/modules/tome_sync/src/Commands/ImportCommand.php
+@@ -46,6 +46,13 @@ class ImportCommand extends CommandBase {
+    */
+   protected $entityTypeManager;
+ 
++  /**
++   * The config factory.
++   *
++   * @var \Drupal\Core\Config\ConfigFactory
++   */
++  protected $configFactory;
++
+   /**
+    * Constructs an ExportCommands instance.
+    *
+@@ -53,11 +60,14 @@ class ImportCommand extends CommandBase {
+    *   The importer.
+    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+    *   The entity type manager.
++   * @param \Drupal\Core\Config\ConfigFactory $config_factory
++   *   The config factory.
+    */
+-  public function __construct(ImporterInterface $importer, EntityTypeManagerInterface $entity_type_manager) {
++  public function __construct(ImporterInterface $importer, EntityTypeManagerInterface $entity_type_manager, ConfigFactory $config_factory) {
+     parent::__construct();
+     $this->importer = $importer;
+     $this->entityTypeManager = $entity_type_manager;
++    $this->configFactory = $config_factory;
+   }
+ 
+   /**
+@@ -96,7 +106,8 @@ class ImportCommand extends CommandBase {
+ 
+     /** @var \Drupal\Core\Config\StorageInterface $source_storage */
+     $source_storage = \Drupal::service('config.storage.sync');
+-    \Drupal::configFactory()->getEditable('system.site')->setData($source_storage->read('system.site'))->save(TRUE);
++    $config_factory = $this->configFactory;
++    $config_factory->getEditable('system.site')->setData($source_storage->read('system.site'))->save(TRUE);
+     if (!$this->runCommand($this->executable . " config:import -y", NULL, NULL)) {
+       return 1;
+     }
+diff --git a/modules/tome_sync/tome_sync.services.yml b/modules/tome_sync/tome_sync.services.yml
+index 7cd7938..b16bf81 100644
+--- a/modules/tome_sync/tome_sync.services.yml
++++ b/modules/tome_sync/tome_sync.services.yml
+@@ -33,7 +33,7 @@ services:
+       - { name: drupal.command }
+   tome_sync.import_command:
+     class: Drupal\tome_sync\Commands\ImportCommand
+-    arguments: ['@tome_sync.importer', '@entity_type.manager']
++    arguments: ['@tome_sync.importer', '@entity_type.manager', '@config.factory']
+     tags:
+       - { name: console.command }
+       - { name: drupal.command }

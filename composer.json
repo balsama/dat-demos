@@ -88,7 +88,17 @@
                 "3023801: Allow newly uploaded files to be deleted from the media library without saving them":
                 "https://www.drupal.org/files/issues/2019-02-28/3023801-30.patch",
                 "2981044: Unify the grid/table views of the media library":
-                "https://www.drupal.org/files/issues/2019-02-27/2981044-69.patch"
+                "https://www.drupal.org/files/issues/2019-02-27/2981044-69.patch",
+                "remove hook_install from umami":
+                "./patches/umami-install-02.patch"
+            },
+            "drupal-tome/tome_drush" :{
+                "Add support for passing Drush site aliases":
+                "./patches/tome_drush-04.patch"
+            },
+            "drupal/tome": {
+                "Remove save event subscriber action and dont update from CLI":
+                "./patches/tome15.patch"
             }
         },
         "installer-paths": {

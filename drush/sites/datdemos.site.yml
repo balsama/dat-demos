@@ -1,0 +1,48 @@
+# Application 'datdemos', environment 'dev'.
+dev:
+  root: /var/www/html/datdemos.dev/docroot
+  ac-site: datdemos
+  ac-env: dev
+  ac-realm: devcloud
+  uri: datdemoscvjsgfvcsd.devcloud.acquia-sites.com
+  dev.livedev:
+    parent: '@datdemos.dev'
+    root: /mnt/gfs/datdemos.dev/livedev/docroot
+  host: datdemoscvjsgfvcsd.ssh.devcloud.acquia-sites.com
+  user: datdemos.dev
+  paths:
+    drush-script: drush9
+
+
+# Application 'datdemos', environment 'prod'.
+prod:
+  root: /var/www/html/datdemos.prod/docroot
+  ac-site: datdemos
+  ac-env: prod
+  ac-realm: devcloud
+  uri: datdemosums9xsrhku.devcloud.acquia-sites.com
+  prod.livedev:
+    parent: '@datdemos.prod'
+    root: /mnt/gfs/datdemos.prod/livedev/docroot
+  host: datdemosums9xsrhku.ssh.devcloud.acquia-sites.com
+  user: datdemos.prod
+  paths:
+    drush-script: drush9
+
+
+# Application 'datdemos', environment 'test'.
+test:
+  root: /var/www/html/datdemos.test/docroot
+  ac-site: datdemos
+  ac-env: test
+  ac-realm: devcloud
+  uri: datdemos4nywglowtb.devcloud.acquia-sites.com
+  test.livedev:
+    parent: '@datdemos.test'
+    root: /mnt/gfs/datdemos.test/livedev/docroot
+  host: datdemos4nywglowtb.ssh.devcloud.acquia-sites.com
+  user: datdemos.test
+  paths:
+    drush-script: drush9
+
+
