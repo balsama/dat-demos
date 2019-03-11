@@ -1,0 +1,25 @@
+diff --git a/modules/tome_sync/src/Commands/ImportCommand.php b/modules/tome_sync/src/Commands/ImportCommand.php
+index 05021c7..da10f4f 100644
+--- a/modules/tome_sync/src/Commands/ImportCommand.php
++++ b/modules/tome_sync/src/Commands/ImportCommand.php
+@@ -96,6 +96,7 @@ class ImportCommand extends CommandBase {
+ 
+     /** @var \Drupal\Core\Config\StorageInterface $source_storage */
+     $source_storage = \Drupal::service('config.storage.sync');
++    $GLOBALS['_tome_sync_installing'] = '_tome_sync_installing';
+     \Drupal::configFactory()->getEditable('system.site')->setData($source_storage->read('system.site'))->save(TRUE);
+     if (!$this->runCommand($this->executable . " config:import -y", NULL, NULL)) {
+       return 1;
+diff --git a/modules/tome_sync/tome_sync.module b/modules/tome_sync/tome_sync.module
+index 793b57c..6c19759 100644
+--- a/modules/tome_sync/tome_sync.module
++++ b/modules/tome_sync/tome_sync.module
+@@ -13,7 +13,7 @@ use Drupal\field\Entity\FieldConfig;
+  * Implements hook_entity_insert().
+  */
+ function tome_sync_entity_insert(EntityInterface $entity) {
+-  if (_tome_sync_should_export($entity)) {
++  if ((_tome_sync_should_export($entity)) && (PHP_SAPI !== 'cli')) {
+     \Drupal::service('tome_sync.exporter')->exportContent($entity);
+   }
+ }

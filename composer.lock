@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "55de56eebc049cc6896fc3ff65ce5a5e",
+    "content-hash": "e9ece9c15c46eecc897415b4fcefb585",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2275,7 +2275,7 @@
                     }
                 },
                 "patches_applied": {
-                    "Remove save event subscriber action": "./patches/tome14.patch"
+                    "Remove save event subscriber action and dont update from CLI": "./patches/tome15.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

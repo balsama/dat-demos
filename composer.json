@@ -97,8 +97,8 @@
                 "./patches/tome_drush-04.patch"
             },
             "drupal/tome": {
-                "Remove save event subscriber action":
-                "./patches/tome14.patch"
+                "Remove save event subscriber action and dont update from CLI":
+                "./patches/tome15.patch"
             }
         },
         "installer-paths": {
