@@ -90,7 +90,9 @@
                 "remove hook_install from umami":
                 "./patches/umami-install-02.patch",
                 "3023801: Allow newly uploaded files to be deleted from the media library without saving them":
-                "https://www.drupal.org/files/issues/2019-03-11/3023801-60.patch"
+                "https://www.drupal.org/files/issues/2019-03-11/3023801-60.patch",
+                "2998091: Make remote videos responsive":
+                "https://www.drupal.org/files/issues/2019-03-08/2998091-65.patch"
             },
             "drupal-tome/tome_drush" :{
                 "Add support for passing Drush site aliases":

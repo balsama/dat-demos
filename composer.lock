@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5ca504210cb3a2c0d4182a5799179c2",
+    "content-hash": "0f78da93141791bcc4b4b0c7c0bbbbcc",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2161,7 +2161,8 @@
                     "2938182: Design intuitive affordances for Layout Builder (for illustrating which parts of the page are editable in a given context)": "https://www.drupal.org/files/issues/2019-02-27/2938182-27.patch",
                     "3002608: Remove contextual links not related to layout administration inside layout builder blocks": "https://www.drupal.org/files/issues/2019-03-01/3002608-62.patch",
                     "remove hook_install from umami": "./patches/umami-install-02.patch",
-                    "3023801: Allow newly uploaded files to be deleted from the media library without saving them": "https://www.drupal.org/files/issues/2019-03-11/3023801-60.patch"
+                    "3023801: Allow newly uploaded files to be deleted from the media library without saving them": "https://www.drupal.org/files/issues/2019-03-11/3023801-60.patch",
+                    "2998091: Make remote videos responsive": "https://www.drupal.org/files/issues/2019-03-08/2998091-65.patch"
                 }
             },
             "autoload": {
@@ -2185,7 +2186,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2019-03-11T14:30:33+00:00"
+            "time": "2019-03-11T17:02:25+00:00"
         },
         {
             "name": "drupal/layout_builder_restrictions",
