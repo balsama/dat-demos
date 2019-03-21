@@ -91,7 +91,8 @@
             "@composer run-server"
         ],
         "save-db": [
-            "cp docroot/fixtures/sqlite/dev/.ht* docroot/fixtures/sqlite/"
+            "cp docroot/fixtures/sqlite/dev/.ht* docroot/fixtures/sqlite/",
+            "drush cex --yes"
         ]
     },
     "extra": {
