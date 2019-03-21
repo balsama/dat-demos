@@ -8,11 +8,12 @@
 /docroot/profiles/contrib/
 /docroot/libraries/
 
-# Ignore sensitive information
-/docroot/sites/*/settings.local.php
-
-# Ignore Drupal's file directory
-/docroot/sites/*/files/
+# Ignore Drupal's file sub-directories but keep uploaded images.
+/docroot/sites/*/files/php
+/docroot/sites/*/files/styles
+/docroot/sites/*/files/css
+/docroot/sites/*/files/2019*
+/docroot/sites/*/files/js
 
 # Ignore SimpleTest multi-site environment.
 /docroot/sites/simpletest

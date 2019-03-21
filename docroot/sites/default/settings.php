@@ -280,7 +280,7 @@ $config_directories = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'XQcDJ3e0RetZ1oKcax-5dUcCvfycgvVARNXNqR_ck6JQ_7JJTRe2wI3G5shbsvlEp2V-rsDFkg';
+$settings['hash_salt'] = 'D-BUMbWdcnmve2386xs6CQP4oKgN8Ha5RmDs1Az4xQ87MYNB-SIlYbHVBWLT2YCB4Bb__fGb_g';
 
 /**
  * Deployment identifier.
@@ -765,12 +765,17 @@ $settings['entity_update_batch_size'] = 50;
  * Keep this code block at the end of this file to take full effect.
  */
 
-if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-  include $app_root . '/' . $site_path . '/settings.local.php';
-}
-
 if (file_exists('/var/www/site-php')) {
   require '/var/www/site-php/datdemos/datdemos-settings.inc';
 }
 
-$config_directories['sync'] = './sites/config/default/sync';
+$config_directories['sync'] = '../config/sync';
+$databases['default']['default'] = array (
+  'database' => 'fixtures/sqlite/.ht.sqlite',
+  'prefix' => '',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\sqlite',
+  'driver' => 'sqlite',
+);
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}

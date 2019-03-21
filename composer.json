@@ -48,7 +48,8 @@
         },
         "preferred-install": {
             "drupal/core": "dist"
-        }
+        },
+        "process-timeout": 0
     },
     "autoload": {
         "classmap": [
@@ -68,6 +69,29 @@
         ],
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "refresh-content": [
+            "drush pm:uninstall demo_umami_content && drush pm:enable demo_umami_content"
+        ],
+        "run-server": [
+            "cd docroot && php core/scripts/drupal server --no-interaction"
+        ],
+        "use-dev": [
+            "mv docroot/sites/default/disabled.settings.local.php docroot/sites/default/settings.local.php"
+        ],
+        "use-exported": [
+            "mv docroot/sites/default/settings.local.php docroot/sites/default/disabled.settings.local.php"
+        ],
+        "quick-start": [
+            "@composer run-server"
+        ],
+        "dev-quick-start": [
+            "drush si --db-url=sqlite://fixtures/dev/sqlite/.ht.sqlite --existing-config --account-pass=admin --yes",
+            "@composer refresh-content",
+            "@composer run-server"
+        ],
+        "save-db": [
+            "cp docroot/fixtures/sqlite/dev/.ht* docroot/fixtures/sqlite/"
         ]
     },
     "extra": {
