@@ -10,13 +10,16 @@ dependencies:
     - field.field.node.recipe.field_number_of_servings
     - field.field.node.recipe.field_preparation_time
     - field.field.node.recipe.field_recipe_category
+    - field.field.node.recipe.field_recipe_image
     - field.field.node.recipe.field_recipe_instruction
     - field.field.node.recipe.field_summary
     - field.field.node.recipe.field_tags
+    - field.field.node.recipe.layout_builder__layout
     - node.type.recipe
     - responsive_image.styles.3_2_image
   module:
     - layout_builder
+    - layout_discovery
     - options
     - responsive_image
     - text
@@ -201,6 +204,23 @@ third_party_settings:
               id: 'extra_field_block:node:recipe:links'
             additional: {  }
             weight: 10
+          a727933c-6089-41bf-af22-f7dbfd2d537e:
+            uuid: a727933c-6089-41bf-af22-f7dbfd2d537e
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:recipe:field_recipe_image'
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 11
         third_party_settings: {  }
 _core:
   default_config_hash: bDKm3M2MIcRmspyqqrt6YsaICgYf9qaHFrTULPNs_Xk
@@ -268,6 +288,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_recipe_image:
+    type: entity_reference_entity_view
+    weight: 11
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
   field_recipe_instruction:
     weight: 9
     label: above
@@ -297,3 +326,4 @@ content:
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
+  layout_builder__layout: true

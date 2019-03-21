@@ -29,4 +29,3 @@ content:
     region: content
 hidden:
   content_moderation_control: true
-  langcode: true
