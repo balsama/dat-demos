@@ -766,7 +766,7 @@ $settings['entity_update_batch_size'] = 50;
  */
 
 if (file_exists('/var/www/site-php')) {
-  require '/var/www/site-php/datdemos/datdemos-settings.inc';
+ // require '/var/www/site-php/datdemos/datdemos-settings.inc';
 }
 
 $config_directories['sync'] = '../config/sync';
