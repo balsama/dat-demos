@@ -29,7 +29,7 @@
         "drupal/core": "8.7.0-alpha2",
         "drupal/layout_builder_restrictions": "^1.4",
         "drupal/tome": "^1.0@beta",
-        "drush/drush": "^9.0.0",
+        "drush/drush": "~9.5.2",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
@@ -86,7 +86,7 @@
             "@composer install",
             "@composer run-server"
         ],
-        "dev-quick-start": [
+        "hard-reset": [
             "drush si --db-url=sqlite://fixtures/dev/sqlite/.ht.sqlite --existing-config --account-pass=admin --yes",
             "@composer refresh-content",
             "@composer run-server"
