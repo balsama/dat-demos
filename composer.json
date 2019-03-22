@@ -26,7 +26,7 @@
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal-tome/tome_drush": "dev-master",
         "drupal/console": "^1.0.2",
-        "drupal/core": "8.7.x-dev#903e872",
+        "drupal/core": "8.7.0-alpha2",
         "drupal/layout_builder_restrictions": "^1.4",
         "drupal/tome": "^1.0@beta",
         "drush/drush": "^9.0.0",
@@ -83,6 +83,7 @@
             "mv docroot/sites/default/settings.local.php docroot/sites/default/disabled.settings.local.php"
         ],
         "quick-start": [
+            "@composer install",
             "@composer run-server"
         ],
         "dev-quick-start": [
@@ -90,8 +91,12 @@
             "@composer refresh-content",
             "@composer run-server"
         ],
-        "save-db": [
+        "export-db": [
             "cp docroot/fixtures/sqlite/dev/.ht* docroot/fixtures/sqlite/",
+            "drush cex --yes"
+        ],
+        "reset-db": [
+            "cp docroot/fixtures/sqlite/.ht* docroot/fixtures/sqlite/dev",
             "drush cex --yes"
         ]
     },
@@ -102,20 +107,18 @@
         },
         "patches": {
             "drupal/core": {
+                "2995689: Allow reordering blocks without a pointer device":
+                "https://www.drupal.org/files/issues/2019-03-20/2995689-112.patch",
+                "2959493: Allow Layout Builder live previews to be toggled to allow easier drag-and-drop":
+                "https://www.drupal.org/files/issues/2019-03-20/2959493-126.patch",
                 "2988970: Layout Builder should make it easier to modify the default layout for an entity type when viewing an entity":
                 "https://www.drupal.org/files/issues/2019-02-28/2988970-54.patch",
                 "2938182: Design intuitive affordances for Layout Builder (for illustrating which parts of the page are editable in a given context)":
                 "https://www.drupal.org/files/issues/2019-02-27/2938182-27.patch",
-                "2959493: Allow Layout Builder live previews to be toggled to allow easier drag-and-drop":
-                "https://www.drupal.org/files/issues/2019-02-28/2959493-56.patch",
-                "3002608: Remove contextual links not related to layout administration inside layout builder blocks":
-                "https://www.drupal.org/files/issues/2019-03-01/3002608-62.patch",
-                "3023801: Allow newly uploaded files to be deleted from the media library without saving them":
-                "https://www.drupal.org/files/issues/2019-02-28/3023801-30.patch",
-                "2981044: Unify the grid/table views of the media library":
-                "https://www.drupal.org/files/issues/2019-02-27/2981044-69.patch",
                 "remove hook_install from umami":
-                "./patches/umami-install-02.patch"
+                "./patches/umami-install-02.patch",
+                "2998091: Make remote videos responsive":
+                "https://www.drupal.org/files/issues/2019-03-11/2998091-75.patch"
             },
             "drupal-tome/tome_drush" :{
                 "Add support for passing Drush site aliases":

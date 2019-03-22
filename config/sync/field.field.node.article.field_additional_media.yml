@@ -1,0 +1,30 @@
+uuid: bfcc789e-f000-42a2-96d5-92ea072e2b58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_media
+    - media.type.image
+    - media.type.remote_video
+    - node.type.article
+id: node.article.field_additional_media
+field_name: field_additional_media
+entity_type: node
+bundle: article
+label: 'Additional Media'
+description: 'Optionally add additional media related to this article.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      remote_video: remote_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

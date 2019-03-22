@@ -1,10 +1,11 @@
 uuid: 48d1e314-88f6-4f07-ac2a-f670730c63d8
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.article.body
+    - field.field.node.article.field_additional_media
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
     - node.type.article
@@ -51,3 +52,4 @@ content:
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
+  field_additional_media: true
