@@ -1,3 +1,4 @@
+# This file is used by Acquia Pipelines continuous integration.
 version: 1.1.0
 services:
   - mysql
@@ -18,5 +19,6 @@ events:
       - cleanup:
           type: script
           script:
-            # Remove the local settings file so we use the exported db.
-            - rm docroot/sites/default/settings.local.php
+            - cd $SOURCE_DIR
+            # Setup settings file and codebase with minimum required for cloud.
+            - ./scripts/configure_cloud.sh
