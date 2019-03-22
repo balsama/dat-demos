@@ -1,14 +1,8 @@
 {
-    "name": "drupal-composer/drupal-project",
-    "description": "Project template for Drupal 8 projects with composer",
+    "name": "drupal-composer/dat-demos",
+    "description": "Project template for DAT Demos",
     "type": "project",
     "license": "GPL-2.0-or-later",
-    "authors": [
-        {
-            "name": "",
-            "role": ""
-        }
-    ],
     "repositories": {
         "drupal": {
             "type": "composer",
@@ -86,7 +80,7 @@
             "@composer install",
             "@composer run-server"
         ],
-        "dev-quick-start": [
+        "hard-reset": [
             "drush si --db-url=sqlite://fixtures/dev/sqlite/.ht.sqlite --existing-config --account-pass=admin --yes",
             "@composer refresh-content",
             "@composer run-server"
