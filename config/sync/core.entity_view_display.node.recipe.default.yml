@@ -102,73 +102,7 @@ third_party_settings:
       -
         layout_id: layout_fourcol_section
         layout_settings: {  }
-        components:
-          bc720875-368c-472e-a39e-ab848685acce:
-            uuid: bc720875-368c-472e-a39e-ab848685acce
-            region: first
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:recipe:field_preparation_time'
-              formatter:
-                label: above
-                settings:
-                  thousand_separator: ''
-                  prefix_suffix: true
-                third_party_settings: {  }
-                type: number_integer
-            additional: {  }
-            weight: 0
-          01f2975b-1d45-440d-8270-a44959619d5e:
-            uuid: 01f2975b-1d45-440d-8270-a44959619d5e
-            region: second
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:recipe:field_cooking_time'
-              formatter:
-                label: above
-                settings:
-                  thousand_separator: ''
-                  prefix_suffix: true
-                third_party_settings: {  }
-                type: number_integer
-            additional: {  }
-            weight: 0
-          df240965-84bc-447c-9fdf-204b022f1ceb:
-            uuid: df240965-84bc-447c-9fdf-204b022f1ceb
-            region: third
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:recipe:field_number_of_servings'
-              formatter:
-                label: above
-                settings:
-                  thousand_separator: ''
-                  prefix_suffix: true
-                third_party_settings: {  }
-                type: number_integer
-            additional: {  }
-            weight: 0
-          bba6e3ed-83d4-48e6-9920-5a388839f64a:
-            uuid: bba6e3ed-83d4-48e6-9920-5a388839f64a
-            region: fourth
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:recipe:field_difficulty'
-              formatter:
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-                type: list_default
-            additional: {  }
-            weight: 0
+        components: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -189,7 +123,7 @@ third_party_settings:
                 third_party_settings: {  }
                 type: string
             additional: {  }
-            weight: 9
+            weight: 13
           703c4889-9264-453e-bd2a-159f78b79931:
             uuid: 703c4889-9264-453e-bd2a-159f78b79931
             region: content
@@ -204,7 +138,7 @@ third_party_settings:
                 third_party_settings: {  }
                 type: text_default
             additional: {  }
-            weight: 10
+            weight: 14
           5dad6a7d-83f1-4349-b022-6b72006f8255:
             uuid: 5dad6a7d-83f1-4349-b022-6b72006f8255
             region: content
@@ -214,7 +148,73 @@ third_party_settings:
                 entity: layout_builder.entity
               id: 'extra_field_block:node:recipe:links'
             additional: {  }
+            weight: 15
+          bba6e3ed-83d4-48e6-9920-5a388839f64a:
+            uuid: bba6e3ed-83d4-48e6-9920-5a388839f64a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:recipe:field_difficulty'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: list_default
+            additional: {  }
+            weight: 12
+          df240965-84bc-447c-9fdf-204b022f1ceb:
+            uuid: df240965-84bc-447c-9fdf-204b022f1ceb
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:recipe:field_number_of_servings'
+              formatter:
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+                type: number_integer
+            additional: {  }
             weight: 11
+          01f2975b-1d45-440d-8270-a44959619d5e:
+            uuid: 01f2975b-1d45-440d-8270-a44959619d5e
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:recipe:field_cooking_time'
+              formatter:
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+                type: number_integer
+            additional: {  }
+            weight: 10
+          bc720875-368c-472e-a39e-ab848685acce:
+            uuid: bc720875-368c-472e-a39e-ab848685acce
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:recipe:field_preparation_time'
+              formatter:
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+                type: number_integer
+            additional: {  }
+            weight: 9
         third_party_settings: {  }
 _core:
   default_config_hash: bDKm3M2MIcRmspyqqrt6YsaICgYf9qaHFrTULPNs_Xk

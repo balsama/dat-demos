@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "36bfd6c4efd7eeec1cfe5e74cecebb61",
+    "content-hash": "85764c6df7162823e83d4b0efad8758f",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1983,16 +1983,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.7.0-alpha2",
+            "version": "8.7.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "01186536523f5a15363ee536c177cf415890a10b"
+                "reference": "c6067a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/01186536523f5a15363ee536c177cf415890a10b",
-                "reference": "01186536523f5a15363ee536c177cf415890a10b",
+                "url": "https://api.github.com/repos/drupal/core/zipball/c6067a6",
+                "reference": "c6067a6",
                 "shasum": ""
             },
             "require": {
@@ -2107,6 +2107,7 @@
                 "drupal/history": "self.version",
                 "drupal/image": "self.version",
                 "drupal/inline_form_errors": "self.version",
+                "drupal/jsonapi": "self.version",
                 "drupal/language": "self.version",
                 "drupal/layout_builder": "self.version",
                 "drupal/layout_discovery": "self.version",
@@ -2157,9 +2158,10 @@
                 "behat/mink": "1.7.x-dev",
                 "behat/mink-goutte-driver": "^1.2",
                 "behat/mink-selenium2-driver": "1.3.x-dev",
-                "drupal/coder": "^8.2.12",
+                "drupal/coder": "^8.3.1",
                 "jcalderonzumba/gastonjs": "^1.0.2",
                 "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
+                "justinrainbow/json-schema": "^5.2",
                 "mikey179/vfsstream": "^1.2",
                 "phpspec/prophecy": "^1.7",
                 "phpunit/phpunit": "^4.8.35 || ^6.5",
@@ -2200,12 +2202,8 @@
                     "merge-extra": false
                 },
                 "patches_applied": {
-                    "2995689: Allow reordering blocks without a pointer device": "https://www.drupal.org/files/issues/2019-03-20/2995689-112.patch",
-                    "2959493: Allow Layout Builder live previews to be toggled to allow easier drag-and-drop": "https://www.drupal.org/files/issues/2019-03-20/2959493-126.patch",
-                    "2988970: Layout Builder should make it easier to modify the default layout for an entity type when viewing an entity": "https://www.drupal.org/files/issues/2019-02-28/2988970-54.patch",
-                    "2938182: Design intuitive affordances for Layout Builder (for illustrating which parts of the page are editable in a given context)": "https://www.drupal.org/files/issues/2019-02-27/2938182-27.patch",
-                    "remove hook_install from umami": "./patches/umami-install-02.patch",
-                    "2998091: Make remote videos responsive": "https://www.drupal.org/files/issues/2019-03-11/2998091-75.patch"
+                    "3044250 - Make the highlighted region more presentable": "https://www.drupal.org/files/issues/2019-04-02/ootb-layout-builder-hightlight-3044250-19.patch",
+                    "remove hook_install from umami": "./patches/umami-install-02.patch"
                 }
             },
             "autoload": {
@@ -2229,14 +2227,14 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2019-03-20T18:08:26+00:00"
+            "time": "2019-04-02T18:18:10+00:00"
         },
         {
             "name": "drupal/layout_builder_restrictions",
             "version": "1.5.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/layout_builder_restrictions",
+                "url": "https://git.drupalcode.org/project/layout_builder_restrictions.git",
                 "reference": "8.x-1.5"
             },
             "dist": {
@@ -2290,7 +2288,7 @@
             "version": "1.0.0-beta4",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/tome",
+                "url": "https://git.drupalcode.org/project/tome.git",
                 "reference": "8.x-1.0-beta4"
             },
             "dist": {
@@ -6012,6 +6010,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal-tome/tome_drush": 20,
+        "drupal/core": 20,
         "drupal/tome": 10
     },
     "prefer-stable": true,
