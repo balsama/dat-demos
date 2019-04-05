@@ -20,7 +20,7 @@
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal-tome/tome_drush": "dev-master",
         "drupal/console": "^1.0.2",
-        "drupal/core": "8.7.x-dev#c6067a6",
+        "drupal/core": "8.7.x-dev#036c662",
         "drupal/layout_builder_restrictions": "^1.4",
         "drupal/tome": "^1.0@beta",
         "drush/drush": "~9.5.2",
@@ -101,8 +101,8 @@
         },
         "patches": {
             "drupal/core": {
-                "3044250 - Make the highlighted region more presentable":
-                "https://www.drupal.org/files/issues/2019-04-02/ootb-layout-builder-hightlight-3044250-19.patch",
+                "3044366 - Fix styling of Umami for layout builder":
+                "https://www.drupal.org/files/issues/2019-04-04/ootb-layout-builder-buttons-checkbox-3044366-12.patch",
                 "remove hook_install from umami":
                 "./patches/umami-install-02.patch"
             },

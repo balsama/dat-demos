@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "85764c6df7162823e83d4b0efad8758f",
+    "content-hash": "13638bd8a0fc3d662ab2aa51a3a2d780",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1987,12 +1987,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "c6067a6"
+                "reference": "036c662"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/c6067a6",
-                "reference": "c6067a6",
+                "url": "https://api.github.com/repos/drupal/core/zipball/036c662",
+                "reference": "036c662",
                 "shasum": ""
             },
             "require": {
@@ -2202,7 +2202,7 @@
                     "merge-extra": false
                 },
                 "patches_applied": {
-                    "3044250 - Make the highlighted region more presentable": "https://www.drupal.org/files/issues/2019-04-02/ootb-layout-builder-hightlight-3044250-19.patch",
+                    "3044366 - Fix styling of Umami for layout builder": "https://www.drupal.org/files/issues/2019-04-04/ootb-layout-builder-buttons-checkbox-3044366-12.patch",
                     "remove hook_install from umami": "./patches/umami-install-02.patch"
                 }
             },
@@ -2227,7 +2227,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2019-04-02T18:18:10+00:00"
+            "time": "2019-04-05T10:18:40+00:00"
         },
         {
             "name": "drupal/layout_builder_restrictions",
