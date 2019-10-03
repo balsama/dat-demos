@@ -48,49 +48,7 @@
         ],
         "files": ["load.environment.php"]
     },
-    "scripts": {
-        "pre-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "pre-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "refresh-content": [
-            "drush pm:uninstall demo_umami_content && drush pm:enable demo_umami_content"
-        ],
-        "run-server": [
-            "cd docroot && php core/scripts/drupal server --no-interaction"
-        ],
-        "use-dev": [
-            "mv docroot/sites/default/disabled.settings.local.php docroot/sites/default/settings.local.php"
-        ],
-        "use-exported": [
-            "mv docroot/sites/default/settings.local.php docroot/sites/default/disabled.settings.local.php"
-        ],
-        "quick-start": [
-            "@composer install",
-            "@composer run-server"
-        ],
-        "hard-reset": [
-            "drush si --db-url=sqlite://fixtures/dev/sqlite/.ht.sqlite --existing-config --account-pass=admin --yes",
-            "@composer refresh-content",
-            "@composer run-server"
-        ],
-        "export-db": [
-            "cp docroot/fixtures/sqlite/dev/.ht* docroot/fixtures/sqlite/",
-            "drush cex --yes"
-        ],
-        "reset-db": [
-            "cp docroot/fixtures/sqlite/.ht* docroot/fixtures/sqlite/dev",
-            "drush cex --yes"
-        ]
-    },
+    "scripts": {},
     "extra": {
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
