@@ -769,13 +769,9 @@ if (file_exists('/var/www/site-php')) {
  // require '/var/www/site-php/datdemos/datdemos-settings.inc';
 }
 
-$config_directories['sync'] = '../config/sync';
-$databases['default']['default'] = array (
-  'database' => 'fixtures/sqlite/.ht.sqlite',
-  'prefix' => '',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\sqlite',
-  'driver' => 'sqlite',
-);
+if (file_exists('/var/www/site-php')) {
+  require '/var/www/site-php/datdemos/datdemos-settings.inc';
+}
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
